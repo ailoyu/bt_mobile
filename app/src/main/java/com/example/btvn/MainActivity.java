@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
 
         EditText et_code = (EditText) findViewById(R.id.code);
         EditText et_name = (EditText) findViewById(R.id.name);
-        EditText et_price = (EditText) findViewById(R.id.price);
         Button bt_save = (Button) findViewById(R.id.bt_save);
         Button bt_view = (Button) findViewById(R.id.bt_view);
         Button bt_close = (Button) findViewById(R.id.bt_close);
@@ -33,9 +32,9 @@ public class MainActivity extends AppCompatActivity {
                 String filename = et_name.getText().toString();
 
                 String cont = "";
-                cont +=  "Name : " + et_name.getText().toString();
+                cont +=  "Code : " + et_code.getText().toString();
                 cont += "      ";
-                cont += "Price: " + et_price.getText().toString();
+                cont += "Information : " + et_name.getText().toString();
                 try {
                     FileOutputStream fout = openFileOutput(filename, Context.MODE_PRIVATE);
                     fout.write(cont.getBytes());
